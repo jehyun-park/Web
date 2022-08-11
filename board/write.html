@@ -13,30 +13,36 @@
         td.t3{text-align: center;}
         textarea{width: 99%; height: 200px;}
     </style>
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+
 </head>
 <body>
-<form>
+<form method="post" action="write_ok.php">
     <table>
         <caption><h2>게시판</h2></caption>
         <tr>
             <td class="t1">제목</td>
-            <td class="t2"><input type="text"><input type="checkbox">공지</td>
+            <td class="t2"><input type="text" style="width: 80%; height: 28px" name="title" placeholder="제목을 입력하세요" required><input type="checkbox" name="notice" value="1">공지</td>
         </tr>
         <tr>
             <td class="t1">작성자</td>
-            <td class="t2"><input type="text"></td>
+            <td class="t2"><input type="text" style="width: 30%; height:28px"   name="name" placeholder="이름을 입력하세요." required></td>
         </tr>
         
         <tr>
-            <td class="t3" colspan="2"><textarea></textarea></td>
+            <td class="t3" colspan="2"><textarea name="editor1" required>       </textarea>
+            <script>
+                CKEDITOR.replace('editor1');
+            </script>
+            </td>
         </tr>
         <tr>
             <td class="t1">비밀번호</td>
-            <td class="t2"><input type="password"></td>
+            <td class="t2"><input type="password" style="width: 30%; height: 28px;" name="pass" required placeholder="비밀번호를 입력하세요."></td>
         </tr>
        
         <tr>
-            <td class="t3" colspan="2"><input type="submit" value="등록"></td>
+            <td class="t3" colspan="2"><input type="submit" value="등록" style="width: 70px; height:35px; background-color: #3333;      border: 0px; color:black; font-weight: bold;" ></td>
         </tr>
 
     </table>
