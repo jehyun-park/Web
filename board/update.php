@@ -1,3 +1,12 @@
+<?php
+include "../config/db.php";
+
+$sql = "select * from board where board_idx=".$_GET['board_idx'];
+echo $sql;
+$result = mysqli_query($con,$sql);
+$row = mysqli_fetch_array($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +27,22 @@
 
 </head>
 <body>
-<form method="post" action="write_ok.php">
+<form method="post" action="update_ok.php">
+    <input type="hidden" name="board_idx" value="<?php echo $row['board_idx'];?>">
     <table>
         <caption><h2>게시판</h2></caption>
         <tr>
             <td class="t1">제목</td>
-            <td class="t2"><input type="text" style="width: 80%; height: 28px" name="title" placeholder="제목을 입력하세요" required><input type="checkbox" name="notice" value="1">공지</td>
+            <td class="t2"><input type="text" style="width: 80%; height: 28px" name="title" placeholder="제목을 입력하세요" required value="<?php echo $row['board_title']?>"><input type="checkbox" name="notice" value="1">
+            <?php if ($row['board_notice']==1){?>checked<?php }?>>공지</td>
         </tr>
         <tr>
             <td class="t1">작성자</td>
-            <td class="t2"><input type="text" style="width: 30%; height:28px"   name="name" placeholder="이름을 입력하세요." required></td>
+            <td class="t2"><input type="text" style="width: 30%; height:28px"   name="name" placeholder="이름을 입력하세요." value="<?php echo $row['board_name']?>" required></td>
         </tr>
         
         <tr>
-            <td class="t3" colspan="2"><textarea name="editor1" required>       </textarea>
+            <td class="t3" colspan="2"><textarea name="editor1" required>    <?php echo $row['board_memo']?>   </textarea>
             <script>
                 CKEDITOR.replace('editor1');
             </script>
