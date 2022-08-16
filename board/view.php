@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($result);
             <td class="d"><a href="list.php">목록</a>&nbsp;
             <a href="write.html">등록</a>&nbsp;
             <a href="update.php?board_idx=<?php echo $row['board_idx'];?>">수정</a>&nbsp;
-            <a href="del,php?board_idx=<?php echo $row['board_idx'];?>">삭제</a>&nbsp;
+            <a href="del.php?board_idx=<?php echo $row['board_idx'];?>">삭제</a>&nbsp;
         </tr>
     </table>
 </body>
