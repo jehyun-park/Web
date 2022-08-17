@@ -1,26 +1,120 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<title>KBO 홈페이지</title>
-<link rel="icon" type="img/png" href="img/kbo1.png" >
-</head>
-<style>
-    t1{float: left;}
-    t2{text-align: center;}
-</style>
-<body>
-<t1>
-    <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBOHome/resources/images/main/img_shinhan.png" width="400px;">
-</t1>
-<t1>
-    <h4>로그인/회원가입/English | 선수 검색</h4>
-</t1><br><br><br><br>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBO</title>
+    <link rel="icon" type="img/png" href="img/kbo1.png" />
+    <link rel="stylesheet" href="../KBO/layout.css" />
+  </head>
+  <body>
+    <div>
+      <!--헤더-->
+      <header class="main-header">
+        <h1>KBO</h1>
+        <h2>KoreaBaseballOrganization</h2>
+      </header>
+      <!--메뉴-->
+      <nav id="main-navi">
+        <div class="pull left">
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">일정/결과</span>
+            </li>
+          </ul>
 
-<t2>
-    <img src="https://lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBOHome/resources/images/common/h1_logo.png">
-    <h5>일정/결과  순위   기록  선수  NEWS  KBO 퓨처스리그  KBO마켓  레전드40</h5>
-</t2>
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">순위</span>
+            </li>
+          </ul>
 
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">기록</span>
+            </li>
+          </ul>
 
-    
-</body> 
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">선수</span>
+            </li>
+          </ul>
+
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">NEWS</span>
+            </li>
+          </ul>
+
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">퓨처스리그</span>
+            </li>
+          </ul>
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">KBO 마켓</span>
+            </li>
+          </ul>
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">레전드 40</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">로그인</span>
+            </li>
+          </ul>
+
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">회원가입</span>
+            </li>
+          </ul>
+
+          <ul class="outer-menu">
+            <li class="outer-menu-item">
+              <span class="menu-title">Enlish</span>
+            </li>
+          </ul>
+        </div>
+
+        <!--검색-->
+
+        <div class="pull right">
+          <div class="search-bar">
+            <form>
+              <input
+                type="text"
+                class="input-search"
+                placeholder="선수를 검색하세요."
+              />
+              <input type="submit" class="input-search-submit" value="검색" />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--본문-->
+    <div>
+      <section>
+        <article>
+          <div>
+            <img
+              class="article-body"
+              src="https://www.finda.co.kr/post/wp-content/uploads/2018/04/1-43.jpg"
+            />
+            <h1 class="article-body2">Team Ranking</h1>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
