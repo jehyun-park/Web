@@ -11,7 +11,7 @@ $row = mysqli_fetch_array($result);
 
 if ($user_pass == $row['user_pass']){
     $_SESSION['user_id'] = $row['user_id'];
-    $_SESSION['uer_name'] = $row['user_name'];
+    $_SESSION['user_name'] = $row['user_name'];
 
     echo "<script>alert('로그인이 되었습니다.'); location.href='index.html';</script>";
 
