@@ -116,7 +116,7 @@ img {
 }
 .article-img {
   text-align: center;
-  margin: 20px;
+  margin: 10px;
 }
 .article-body {
   font-size: 14px;
@@ -154,4 +154,55 @@ img {
 
 .inner-menu {
   display: none;
+}
+
+/*----------글 등록------------*/
+.notice_btn {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.btn {
+  width: 150px;
+  height: 35px;
+  background-color: yellowgreen;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.notice_write {
+  width: 1000px;
+  height: 700px;
+  background-color: whitesmoke;
+  line-height: 80px;
+}
+.notice_write_title {
+  margin-left: 5px;
+  width: 100px;
+  font-size: 20px;
+  font-weight: 20px;
+}
+.notice_memo {
+  margin-left: 40px;
+}
+.notice_write_file {
+  margin-left: -25px;
+}
+
+.notice_write_btn {
+  width: 100px;
+  height: 35px;
+  background-color: #3c3b3b;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.notice_memo_write {
+  width: 500px;
 }
