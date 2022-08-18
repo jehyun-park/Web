@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +20,18 @@
         <hgroup>
           <h1 class="main-title">대구가톨릭대학교</h1>
           <h2 class="main-desc">희망을 전하는 DCU 대구가톨릭대학교</h2>
+          <h2 classs="main-desc"></h2>
+          <?php
+          if(!isset($_SESSION['user_id'])){
+            ?>
+          로그인
+          <?php
+        } else {
+            ?>
+          <?php echo $_SESSION['user_name'];?>님 반갑습니다. &nbsp;로그아웃
+          <?php
+        }
+        ?>
         </hgroup>
       </header>
       <!--메뉴영역-->
