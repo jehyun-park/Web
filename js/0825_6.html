@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      div {
+        width: 100px;
+        height: 35px;
+        background-color: rgb(141, 24, 24);
+        border: 1px solid #000;
+        line-height: 35px;
+        transition: width 2s, background-color 2s, font-size 2s;
+      }
+
+      div:hover {
+        width: 200px;
+        background-color: red;
+        font-size: 20px;
+        text-align: center;
+        transition-timing-function: ease;
+        /*ease / liner / ease-in / ease-out / */
+      }
+    </style>
+  </head>
+  <body>
+    <div><a href="#">홈</a></div>
+    <div><a href="#">대학정보</a></div>
+    <div><a href="#">대학/대학원</a></div>
+    <div><a href="#">입학</a></div>
+    <div><a href="#">교육/생활</a></div>
+  </body>
+</html>

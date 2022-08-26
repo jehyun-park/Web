@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.a1").click(function () {
+          $("img").animate({ width: "100px" });
+        });
+        $("button.a2").click(function () {
+          $("img").animate({ width: "200px" });
+        });
+        $("button.a3").click(function () {
+          $("img").animate({ width: "300px", left: "300px" });
+        });
+        $("button.a4").click(function () {
+          $("img").fadeOut("slow");
+        });
+        $("button.a5").click(function () {
+          $("img").fadeIn("slow");
+        });
+      });
+    </script>
+  </head>
+  <style>
+    .pic {
+      text-align: center;
+    }
+    .img1 {
+      width: 400px;
+    }
+  </style>
+  <body>
+    <div class="pic">
+      <p>원하는 크기로 그림을 바꿔보세요.</p>
+      <button class="a1">가로 100픽셀</button>
+      <button class="a2">가로 200픽셀</button>
+      <button class="a3">가로 300픽셀</button>
+      <button class="a4">fadeout</button>
+      <button class="a5">fadein</button>
+      <br /><br />
+      <img src="img.jpg" class="img1" style="position: relative" />
+      <!--show/hide/toggle/fadeIn/fadeOut/fadeToggle/fadeTo/slideUP/slideDown/slideToggle-->
+    </div>
+  </body>
+</html>

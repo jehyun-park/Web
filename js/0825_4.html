@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#slide").click(function () {
+          $("#notice").slideDown("slow");
+        });
+        $("#notice").click(function () {
+          $("#notice").slideUp("fast");
+        });
+        $("#button").click(function () {
+          $("#notice").slideToggle("slow");
+        });
+      });
+    </script>
+
+    <style>
+      #slide {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        width: 500px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #000;
+      }
+      #layout {
+        margin: 0 auto;
+        width: 50%;
+      }
+      #notice {
+        height: 350px;
+        background-color: #eee;
+        width: 500px;
+        padding: 5px;
+        border: 1px solid #000;
+        display: none;
+      }
+      #button {
+        height: 25px;
+        background-color: blue;
+        width: 500px;
+        padding: 5px;
+        border: 1px solid #000;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="layout">
+      <div id="slide">[오늘의 공지사항]</div>
+      <div id="notice">
+        전달사항이 있습니다.<br />
+        전원 강의실에 모여주시기 바랍니다.
+      </div>
+      <div id="button">Slide Button</div>
+    </div>
+  </body>
+</html>

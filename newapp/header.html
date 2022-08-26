@@ -1,7 +1,28 @@
+<?php
+session_start();
+?>
+
 <!--헤더영역(로고)-->
 <header id="main-header">
   <hgroup>
-    <h1 class="main-title">대구가톨릭대학교</h1>
+    <h1 class="main-title"><a href="/">대구가톨릭대학교</a></h1>
     <h2 class="main-desc">희망을 전하는 DCU 대구가톨릭대학교</h2>
+
+    <h2 class="main-desc">
+      <?php
+          if(!isset($_SESSION['user_id'])){
+              ?>
+      <a href="login.php">로그인</a> / <a href="member.html">회원가입</a>
+      <?php
+          } else {
+          ?>
+      <?php echo $_SESSION['user_name'];?>님 반갑습니다. &nbsp;<a
+        href="../login_out.php"
+        >로그아웃</a
+      >
+      <?php
+          }
+          ?>
+    </h2>
   </hgroup>
 </header>
