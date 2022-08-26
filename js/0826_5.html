@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(document).ready(function () {
+        $("#box")
+          .css({
+            width: 800,
+            height: 300,
+            background: "red",
+          })
+          .animate(
+            {
+              width: 300,
+              opacity: 0.5,
+            },
+            5000
+          )
+          .animate(
+            {
+              opacity: 1,
+              width: "+=500",
+              height: "-=100",
+            },
+            5000
+          );
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

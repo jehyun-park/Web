@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function (e) {
+          var value = $("input").val();
+
+          //유효성 검사
+          if (value.replace(/[가-힣]/g, "").length == 0) {
+            alert("제대로 입력을 하였습니다.");
+          } else {
+            alert("한글로 입력하셔야 됩니다.");
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <form action="https://cu.ac.kr">
+      <label>이름</label>
+      <input type="text" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
